@@ -20,8 +20,10 @@ namespace product_Test.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Gender> Genders { get; set; }
+        public DbSet<Student> Students { get; set; }
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("product_Test", throwIfV1Schema: false)
         {
         }
 
